@@ -1,0 +1,30 @@
+ 
+-- ЭТАП 2. Продвинутый анализ
+-- Проект: Анализ каталога Netflix
+-- Автор: Владимир
+ 
+-- Запрос 8. Топ-3 жанра для каждой страны (оконная функция RANK)
+WITH genre_by_country AS (
+SELECT
+        TRIM(c.country) AS country,
+        TRIM(genre) AS genre,
+        COUNT(*) AS titles_count
+    FROM netflix,
+         unnest(string_to_array(listed_in, ',')) AS genre,
+         unnest(string_to_array(country, ',')) AS c(country)
+    WHERE genre IS NOT NULL
+      AND c.country IS NOT NULL
+      AND TRIM(c.country) != ''
+    GROUP BY TRIM(c.country), genre),
+ranked AS (
+SELECT
+        country,
+        genre,
+        titles_count,
+        RANK() OVER (PARTITION BY country ORDER BY titles_count DESC) AS rank_in_country
+    FROM genre_by_country)
+SELECT *
+FROM ranked
+WHERE rank_in_country <= 3
+ORDER BY country, rank_in_country
+LIMIT 30;
