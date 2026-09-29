@@ -56,6 +56,7 @@ Movies — 6131 (70%), TV Shows — 2676 (30%).
 Дашборд
 Построен в Power BI на основе SQL-выгрузок.
 5 визуалов: типы контента, топ-10 стран, топ-10 жанров, рейтинги, динамика по годам.
-<img width="1920" height="1105" alt="2026-09-29_13-21-42" src="https://github.com/user-attachments/assets/8afec606-66fa-4c93-b80d-e730fbe85fcb" />
+ <img width="1920" height="1095" alt="2026-09-29_13-24-02" src="https://github.com/user-attachments/assets/f97212d6-4b67-4341-b67a-477f42051c31" />
+
 
   
