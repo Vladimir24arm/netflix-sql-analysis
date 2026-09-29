@@ -56,5 +56,6 @@ Movies — 6131 (70%), TV Shows — 2676 (30%).
 Дашборд
 Построен в Power BI на основе SQL-выгрузок.
 5 визуалов: типы контента, топ-10 стран, топ-10 жанров, рейтинги, динамика по годам.
-![Дашборд](results/netflix_dashboard.png)
+<img width="1920" height="1105" alt="2026-09-29_13-21-42" src="https://github.com/user-attachments/assets/8afec606-66fa-4c93-b80d-e730fbe85fcb" />
+
   
